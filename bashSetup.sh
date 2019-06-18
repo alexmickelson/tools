@@ -1,0 +1,3 @@
+
+cp config/.vimrc ~/
+
