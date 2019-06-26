@@ -4,6 +4,3 @@
 ~\tools\powershellSetup.ps1
 import-module posh-git
 Set-Alias which Get-Command
-Set-Alias -name kubecurl -value C:\Users\Alex\.tools\curlKubernets.ps1
-
-#cd C:\Users\Alex
