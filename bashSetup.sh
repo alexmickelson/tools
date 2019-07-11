@@ -14,5 +14,7 @@ git config --global credential.helper 'cache --timeout=3600'
 command -v curl > /dev/null || echo "Install curl to install lazydocker"
 command -v lazydocker > /dev/null || ~/tools/installLazyDocker.sh
 
+command -v lazydocker > /dev/null && cp ~/tools/config/lazydockerconfig.yml ~/.config/jesseduffield/lazydocker/config.yml
+
 
 
