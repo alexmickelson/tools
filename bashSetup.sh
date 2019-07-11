@@ -3,7 +3,7 @@
 #make sure this file runs every time you start bash (on startup)
 grep -qxF '~/tools/bashSetup.sh' ~/.bashrc || echo '~/tools/bashSetup.sh' >> ~/.bashrc
 
-cp config/.vimrc ~/
+cp ~/tools/config/.vimrc ~/
 #remember git username and password for 1 hr (WARNING: stored in plaintext for that hour)
 git config --global credential.helper 'cache --timeout=3600'
 
