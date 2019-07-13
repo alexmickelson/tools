@@ -12,7 +12,7 @@ git config --global credential.helper 'cache --timeout=3600'
 
 #make sure git-prompt is installed 
 [ -d "$HOME/.bash-git-prompt" ] || git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
-grep -qxF 'if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then' $HOME/. || echo '
+grep -qxF 'if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then' $HOME/.bashrc || echo '
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
     source $HOME/.bash-git-prompt/gitprompt.sh
