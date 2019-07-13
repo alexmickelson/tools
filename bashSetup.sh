@@ -22,7 +22,7 @@ fi
 command -v curl > /dev/null || echo "Install curl to install lazydocker"
 command -v lazydocker > /dev/null || $HOME/tools/installLazyDocker.sh
 
-command -v lazydocker > /dev/null && mkdir $HOME/.config/jesseduffield/lazydocker/
+command -v lazydocker > /dev/null && mkdir -p $HOME/.config/jesseduffield/lazydocker/
 command -v lazydocker > /dev/null && cp $HOME/tools/config/lazydockerconfig.yml $HOME/.config/jesseduffield/lazydocker/config.yml
 
 
