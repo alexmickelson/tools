@@ -12,11 +12,13 @@ git config --global credential.helper 'cache --timeout=3600'
 
 #make sure git-prompt is installed 
 [ -d "$HOME/.bash-git-prompt" ] || git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
+#grep -qxF '$HOME/tools/bashSetup.sh' $HOME/.bashrc
+echo '
 if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-    export GIT_PROMPT_ONLY_IN_REPO=1
+    GIT_PROMPT_ONLY_IN_REPO=1
     source $HOME/.bash-git-prompt/gitprompt.sh
-    export GIT_PROMPT_THEME=Single_line_Ubuntu
-fi
+    GIT_PROMPT_THEME=Single_line_Ubuntu
+fi'
 
 #install lazydocker if not installed
 command -v curl > /dev/null || echo "Install curl to install lazydocker"
