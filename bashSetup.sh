@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #make sure this file runs every time you start bash (on startup)
-grep -qxF '~/tools/bashSetup.sh' ~/.bashrc || echo '~/tools/bashSetup.sh' >> ~/.bashrc
+grep -qxF '~/tools/bashSetup.sh' $HOME/.bashrc || echo '~/tools/bashSetup.sh' >> $HOME/.bashrc
 
 #cp ~/tools/config/.vimrc ~/
 #remember git username and password for 1 hr (WARNING: stored in plaintext for that hour)
@@ -20,9 +20,10 @@ fi
 
 #install lazydocker if not installed
 command -v curl > /dev/null || echo "Install curl to install lazydocker"
-command -v lazydocker > /dev/null || ~/tools/installLazyDocker.sh
+command -v lazydocker > /dev/null || $HOME/tools/installLazyDocker.sh
 
-command -v lazydocker > /dev/null && cp ~/tools/config/lazydockerconfig.yml ~/.config/jesseduffield/lazydocker/config.yml
+command -v lazydocker > /dev/null && mkdir $HOME/.config/jesseduffield/lazydocker/
+command -v lazydocker > /dev/null && cp $HOME/tools/config/lazydockerconfig.yml $HOME/.config/jesseduffield/lazydocker/config.yml
 
 
 
