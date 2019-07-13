@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #make sure this file runs every time you start bash (on startup)
-grep -qxF '~/tools/bashSetup.sh' $HOME/.bashrc || echo '~/tools/bashSetup.sh' >> $HOME/.bashrc
+grep -qxF '$HOME/tools/bashSetup.sh' $HOME/.bashrc || echo '$HOME/tools/bashSetup.sh' >> $HOME/.bashrc
 
 #cp ~/tools/config/.vimrc ~/
 #remember git username and password for 1 hr (WARNING: stored in plaintext for that hour)
