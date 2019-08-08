@@ -5,6 +5,7 @@ grep -qxF '$HOME/tools/bashSetup.sh' $HOME/.bashrc || echo '$HOME/tools/bashSetu
 
 #set up aliases
 grep -qxF 'alias commit="$HOME/tools/scripts/commit.sh"' $HOME/.bashrc || echo 'alias commit="$HOME/tools/scripts/commit.sh"' >> $HOME/.bashrc
+grep -qxF 'alias deploy="git pull; docker-compose down; docker-compose up -d; lazydocker"' $HOME/.bashrc || echo 'alias deploy="git pull; docker-compose down; docker-compose up -d; lazydocker"' >> $HOME/.bashrc
 
 #cp ~/tools/config/.vimrc ~/
 #remember git username and password for 1 hr (WARNING: stored in plaintext for that hour)
