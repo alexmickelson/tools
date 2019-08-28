@@ -7,12 +7,15 @@ grep -qxF '$HOME/tools/bashSetup.sh' $HOME/.bashrc || echo '$HOME/tools/bashSetu
 grep -qxF 'alias commit="$HOME/tools/scripts/commit.sh"' $HOME/.bashrc || echo 'alias commit="$HOME/tools/scripts/commit.sh"' >> $HOME/.bashrc
 grep -qxF 'alias deploy="git pull; docker-compose down; docker-compose up -d; lazydocker"' $HOME/.bashrc || echo 'alias deploy="git pull; docker-compose down; docker-compose up -d; lazydocker"' >> $HOME/.bashrc
 
+
 #cp ~/tools/config/.vimrc ~/
 #remember git username and password for 1 hr (WARNING: stored in plaintext for that hour)
 git config --global credential.helper 'cache --timeout=3600'
 
 #adjust path to include snaps (only if /snap/bin/ exists)
 [ -d "/snap/bin/" ] && echo "$PATH"|grep -q "/snap/bin" && export PATH=$PATH:/snap/bin/
+#include dotnet in path
+[ -d "$HOME/.dotnet/" ] && echo "$PATH"|grep -q "$HOME/.dotnet/" && export PATH=$PATH:$HOME/.dotnet/
 
 #make sure git-prompt is installed 
 [ -d "$HOME/.bash-git-prompt" ] || git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
