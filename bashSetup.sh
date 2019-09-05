@@ -15,7 +15,7 @@ git config --global credential.helper 'cache --timeout=3600'
 #adjust path to include snaps (only if /snap/bin/ exists)
 [ -d "/snap/bin/" ] && echo "$PATH"|grep -q "/snap/bin" && export PATH=$PATH:/snap/bin/
 #include dotnet in path
-[ -d "$HOME/.dotnet/" ] && echo "$PATH"|grep -q "$HOME/.dotnet/" || export PATH="$PATH:$HOME/.dotnet/"
+#[ -d "$HOME/.dotnet/" ] && echo "$PATH"|grep -q "$HOME/.dotnet/" || export PATH="$PATH:$HOME/.dotnet/"
 
 #make sure git-prompt is installed 
 [ -d "$HOME/.bash-git-prompt" ] || git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
