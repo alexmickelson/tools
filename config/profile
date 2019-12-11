@@ -4,3 +4,5 @@
 ~\tools\powershellSetup.ps1
 import-module posh-git
 Set-Alias which Get-Command
+export VISUAL=vim
+export EDITOR="$VISUAL"
