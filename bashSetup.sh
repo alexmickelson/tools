@@ -27,12 +27,12 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
 fi
 ' >> $HOME/.bashrc
 
-#install lazydocker if not installed
-command -v curl > /dev/null || echo "Install curl to install lazydocker"
-command -v lazydocker > /dev/null || $HOME/tools/installLazyDocker.sh
+# #install lazydocker if not installed
+# command -v curl > /dev/null || echo "Install curl to install lazydocker"
+# command -v lazydocker > /dev/null || $HOME/tools/installLazyDocker.sh
 
-command -v lazydocker > /dev/null && mkdir -p $HOME/.config/jesseduffield/lazydocker/
-command -v lazydocker > /dev/null && cp $HOME/tools/config/lazydockerconfig.yml $HOME/.config/jesseduffield/lazydocker/config.yml
+# command -v lazydocker > /dev/null && mkdir -p $HOME/.config/jesseduffield/lazydocker/
+# command -v lazydocker > /dev/null && cp $HOME/tools/config/lazydockerconfig.yml $HOME/.config/jesseduffield/lazydocker/config.yml
 
 
 
