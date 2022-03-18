@@ -34,5 +34,6 @@ fi
 # command -v lazydocker > /dev/null && mkdir -p $HOME/.config/jesseduffield/lazydocker/
 # command -v lazydocker > /dev/null && cp $HOME/tools/config/lazydockerconfig.yml $HOME/.config/jesseduffield/lazydocker/config.yml
 
-
+# Force use of docker buildkit
+grep -qxF 'export DOCKER_BUILDKIT=1' $HOME/.bashrc || echo 'export DOCKER_BUILDKIT=1' >> $HOME/.bashrc
 
